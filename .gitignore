@@ -1,0 +1,55 @@
+# Dependencies
+node_modules/
+vendor/
+.venv/
+env/
+
+# Build output
+dist/
+build/
+out/
+*.min.js
+*.min.css
+
+# Environment & secrets
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*.suo
+
+# Testing & coverage
+coverage/
+.nyc_output/
+*.test.js.snap
+
+# Compiled / cache
+__pycache__/
+*.pyc
+*.pyo
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
+
+# Misc
+*.tmp
+*.bak
+*.orig

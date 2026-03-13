@@ -1,0 +1,246 @@
+export type CarCategory = "SEDANS" | "SUVS" | "HATCHBACKS";
+export type EngineType = "Petrol" | "Diesel" | "Electric";
+
+export interface CarSpecs {
+  [section: string]: { [key: string]: string };
+}
+
+export interface Car {
+  id: number;
+  name: string;
+  price: string;
+  category: CarCategory;
+  usage: string[];
+  year: number;
+  engine: EngineType;
+  hp: number;
+  torque: number;
+  groundClearance: number;
+  cc: number;
+  specs: CarSpecs;
+}
+
+export const CMS_CARS: Car[] = [
+  {
+    id: 1,
+    name: "Honda City",
+    price: "$9,999*",
+    category: "SEDANS",
+    usage: ["Family Car", "City Car"],
+    year: 2024,
+    engine: "Petrol",
+    hp: 150,
+    torque: 250,
+    groundClearance: 180,
+    cc: 1498,
+    specs: {
+      "Engine & Drivetrain": {
+        "Engine Type": "1.5L DOHC i-VTEC",
+        "Displacement": "1498 CC",
+        "Max Power": "150 HP @ 6600 rpm",
+        "Max Torque": "250 NM @ 4600 rpm",
+        "Transmission": "CVT / 6-Speed Manual",
+        "Drive Type": "FWD",
+      },
+      Dimensions: {
+        Length: "4549 mm",
+        Width: "1748 mm",
+        Height: "1467 mm",
+        Wheelbase: "2600 mm",
+        "Ground Clearance": "180 MM",
+        "Kerb Weight": "1053 kg",
+      },
+      Brakes: { "Front Brakes": "Disc", "Rear Brakes": "Drum", ABS: "Yes", EBD: "Yes" },
+      "Tires/Wheels": { "Tire Size": "185/60 R15", "Wheel Type": "Alloy", "Wheel Size": "15 inch" },
+      Suspension: { Front: "MacPherson Strut", Rear: "Torsion Beam" },
+      Features: { Sunroof: "No", "Cruise Control": "Yes", "Parking Sensors": "Rear", Camera: "Rear View" },
+      Technology: { Infotainment: "8-inch Touchscreen", "Apple CarPlay": "Yes", "Android Auto": "Yes", Bluetooth: "Yes" },
+      Style: { Colors: "Radiant Red, Lunar Silver, Meteoroid Grey", Seating: "5 Adults" },
+    },
+  },
+  {
+    id: 2,
+    name: "Maruti Suzuki Swift",
+    price: "$11,999*",
+    category: "HATCHBACKS",
+    usage: ["City Car", "Family Car"],
+    year: 2024,
+    engine: "Petrol",
+    hp: 90,
+    torque: 113,
+    groundClearance: 163,
+    cc: 1197,
+    specs: {
+      "Engine & Drivetrain": {
+        "Engine Type": "1.2L Dualjet",
+        "Displacement": "1197 CC",
+        "Max Power": "90 HP @ 6000 rpm",
+        "Max Torque": "113 NM @ 4400 rpm",
+        "Transmission": "AMT / 5-Speed Manual",
+        "Drive Type": "FWD",
+      },
+      Dimensions: {
+        Length: "3845 mm",
+        Width: "1735 mm",
+        Height: "1530 mm",
+        Wheelbase: "2450 mm",
+        "Ground Clearance": "163 MM",
+        "Kerb Weight": "865 kg",
+      },
+      Brakes: { "Front Brakes": "Disc", "Rear Brakes": "Drum", ABS: "Yes", EBD: "Yes" },
+      "Tires/Wheels": { "Tire Size": "185/65 R15", "Wheel Type": "Alloy", "Wheel Size": "15 inch" },
+      Suspension: { Front: "MacPherson Strut", Rear: "Torsion Beam" },
+      Features: { Sunroof: "No", "Cruise Control": "No", "Parking Sensors": "Rear", Camera: "Rear View" },
+      Technology: { Infotainment: "7-inch SmartPlay Pro+", "Apple CarPlay": "Yes", "Android Auto": "Yes", Bluetooth: "Yes" },
+      Style: { Colors: "Solid Fire Red, Pearl Midnight Black, Pearl Metallic Silky Silver", Seating: "5 Adults" },
+    },
+  },
+  {
+    id: 3,
+    name: "Hyundai Verna",
+    price: "$11,999*",
+    category: "SEDANS",
+    usage: ["Family Car", "City Car"],
+    year: 2025,
+    engine: "Petrol",
+    hp: 160,
+    torque: 253,
+    groundClearance: 175,
+    cc: 1482,
+    specs: {
+      "Engine & Drivetrain": {
+        "Engine Type": "1.5L Turbo GDi",
+        "Displacement": "1482 CC",
+        "Max Power": "160 HP @ 5500 rpm",
+        "Max Torque": "253 NM @ 1500 rpm",
+        "Transmission": "7-Speed DCT",
+        "Drive Type": "FWD",
+      },
+      Dimensions: {
+        Length: "4535 mm",
+        Width: "1765 mm",
+        Height: "1475 mm",
+        Wheelbase: "2670 mm",
+        "Ground Clearance": "175 MM",
+        "Kerb Weight": "1138 kg",
+      },
+      Brakes: { "Front Brakes": "Ventilated Disc", "Rear Brakes": "Disc", ABS: "Yes", EBD: "Yes" },
+      "Tires/Wheels": { "Tire Size": "215/45 R17", "Wheel Type": "Alloy", "Wheel Size": "17 inch" },
+      Suspension: { Front: "MacPherson Strut with Coil Spring", Rear: "Coupled Torsion Beam Axle" },
+      Features: { Sunroof: "Panoramic", "Cruise Control": "Adaptive", "Parking Sensors": "Front & Rear", Camera: "360°" },
+      Technology: { Infotainment: "10.25-inch Touchscreen", "Apple CarPlay": "Wireless", "Android Auto": "Wireless", Bluetooth: "Yes" },
+      Style: { Colors: "Abyss Black, Fiery Red, Stargazing Blue", Seating: "5 Adults" },
+    },
+  },
+  {
+    id: 4,
+    name: "Toyota Fortuner",
+    price: "$11,999*",
+    category: "SUVS",
+    usage: ["Family Car", "Off-Road"],
+    year: 2024,
+    engine: "Diesel",
+    hp: 201,
+    torque: 500,
+    groundClearance: 225,
+    cc: 2755,
+    specs: {
+      "Engine & Drivetrain": {
+        "Engine Type": "2.8L GD Turbodiesel",
+        "Displacement": "2755 CC",
+        "Max Power": "201 HP @ 3400 rpm",
+        "Max Torque": "500 NM @ 1600 rpm",
+        "Transmission": "6-Speed Automatic",
+        "Drive Type": "4WD",
+      },
+      Dimensions: {
+        Length: "4795 mm",
+        Width: "1855 mm",
+        Height: "1835 mm",
+        Wheelbase: "2745 mm",
+        "Ground Clearance": "225 MM",
+        "Kerb Weight": "2140 kg",
+      },
+      Brakes: { "Front Brakes": "Ventilated Disc", "Rear Brakes": "Solid Disc", ABS: "Yes", EBD: "Yes" },
+      "Tires/Wheels": { "Tire Size": "265/60 R18", "Wheel Type": "Alloy", "Wheel Size": "18 inch" },
+      Suspension: { Front: "Double Wishbone with Coil Spring", Rear: "4-Link with Coil Spring" },
+      Features: { Sunroof: "No", "Cruise Control": "Yes", "Parking Sensors": "Front & Rear", Camera: "360°" },
+      Technology: { Infotainment: "8-inch Touchscreen", "Apple CarPlay": "Yes", "Android Auto": "Yes", Bluetooth: "Yes" },
+      Style: { Colors: "Super White, Silver Metallic, Grey Metallic, Black", Seating: "7 Adults" },
+    },
+  },
+  {
+    id: 5,
+    name: "Hyundai Creta",
+    price: "$11,999*",
+    category: "SUVS",
+    usage: ["City Car", "Family Car"],
+    year: 2025,
+    engine: "Petrol",
+    hp: 140,
+    torque: 242,
+    groundClearance: 190,
+    cc: 1482,
+    specs: {
+      "Engine & Drivetrain": {
+        "Engine Type": "1.5L Turbo GDi",
+        "Displacement": "1482 CC",
+        "Max Power": "140 HP @ 6000 rpm",
+        "Max Torque": "242 NM @ 1500 rpm",
+        "Transmission": "7-Speed DCT",
+        "Drive Type": "FWD",
+      },
+      Dimensions: {
+        Length: "4300 mm",
+        Width: "1790 mm",
+        Height: "1635 mm",
+        Wheelbase: "2610 mm",
+        "Ground Clearance": "190 MM",
+        "Kerb Weight": "1235 kg",
+      },
+      Brakes: { "Front Brakes": "Ventilated Disc", "Rear Brakes": "Drum", ABS: "Yes", EBD: "Yes" },
+      "Tires/Wheels": { "Tire Size": "215/60 R17", "Wheel Type": "Alloy", "Wheel Size": "17 inch" },
+      Suspension: { Front: "MacPherson Strut", Rear: "Coupled Torsion Beam" },
+      Features: { Sunroof: "Panoramic", "Cruise Control": "Adaptive", "Parking Sensors": "Front & Rear", Camera: "360°" },
+      Technology: { Infotainment: "10.25-inch Touchscreen", "Apple CarPlay": "Wireless", "Android Auto": "Wireless", Bluetooth: "Yes" },
+      Style: { Colors: "Abyss Black, Titan Grey, Uyuni White, Starry Night", Seating: "5 Adults" },
+    },
+  },
+  {
+    id: 6,
+    name: "Hyundai i20",
+    price: "$11,999*",
+    category: "HATCHBACKS",
+    usage: ["City Car"],
+    year: 2024,
+    engine: "Petrol",
+    hp: 83,
+    torque: 114,
+    groundClearance: 165,
+    cc: 1197,
+    specs: {
+      "Engine & Drivetrain": {
+        "Engine Type": "1.2L Kappa2 MPI",
+        "Displacement": "1197 CC",
+        "Max Power": "83 HP @ 6000 rpm",
+        "Max Torque": "114 NM @ 4000 rpm",
+        "Transmission": "5-Speed iMT",
+        "Drive Type": "FWD",
+      },
+      Dimensions: {
+        Length: "3995 mm",
+        Width: "1775 mm",
+        Height: "1505 mm",
+        Wheelbase: "2580 mm",
+        "Ground Clearance": "165 MM",
+        "Kerb Weight": "968 kg",
+      },
+      Brakes: { "Front Brakes": "Disc", "Rear Brakes": "Drum", ABS: "Yes", EBD: "Yes" },
+      "Tires/Wheels": { "Tire Size": "195/55 R16", "Wheel Type": "Alloy", "Wheel Size": "16 inch" },
+      Suspension: { Front: "MacPherson Strut", Rear: "Coupled Torsion Beam" },
+      Features: { Sunroof: "Sunroof", "Cruise Control": "Yes", "Parking Sensors": "Rear", Camera: "Rear View" },
+      Technology: { Infotainment: "10.25-inch Touchscreen", "Apple CarPlay": "Yes", "Android Auto": "Yes", Bluetooth: "Yes" },
+      Style: { Colors: "Typhoon Silver, Titan Grey, Fiery Red, Atlas White", Seating: "5 Adults" },
+    },
+  },
+];

@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --gold: #f0a500;
+}
+
+html, body {
+  background: #0a0a0a;
+  color: #fff;
+  height: 100%;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #111; }
+::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #555; }
+
+/* Slide-in panel transition */
+.spec-panel-enter { transform: translateX(100%); }
+.spec-panel-enter-active { transform: translateX(0); transition: transform 250ms ease; }
+.spec-panel-exit { transform: translateX(0); }
+.spec-panel-exit-active { transform: translateX(100%); transition: transform 250ms ease; }
+
+/* Compare bar transition */
+.compare-bar-enter { transform: translateY(100%); }
+.compare-bar-enter-active { transform: translateY(0); transition: transform 200ms ease; }
+.compare-bar-exit { transform: translateY(0); }
+.compare-bar-exit-active { transform: translateY(100%); transition: transform 200ms ease; }
